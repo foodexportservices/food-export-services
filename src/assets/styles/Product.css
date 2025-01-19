@@ -1,0 +1,104 @@
+/* .chakra-rating-group__item[aria-posinset="1"] {
+  padding: 0.3rem;
+  background-color: black;
+  border-radius: 8.89px;
+  margin-right: 0.1rem;
+} */
+
+/* Style for the second star */
+/* .chakra-rating-group__item[aria-posinset="2"] {
+  padding: 0.3rem;
+  background-color: black;
+  border-radius: 8.89px;
+  margin-right: 0.1rem;
+} */
+
+/* Style for the third star */
+/* .chakra-rating-group__item[aria-posinset="3"] {
+  padding: 0.3rem;
+  background-color: black;
+  border-radius: 8.89px;
+  margin-right: 0.1rem;
+} */
+
+/* Style for the fourth star */
+/* .chakra-rating-group__item[aria-posinset="4"] {
+  padding: 0.3rem;
+  background-color: black;
+  border-radius: 8.89px;
+  margin-right: 0.1rem;
+} */
+
+/* Style for the fifth star */
+/* .hereee[aria-posinset="5"] {
+  padding: 0.3rem;
+  background-color: black;
+  border-radius: 8.89px;
+  margin-right: 0.1rem;
+} */
+
+.hereee > div > span {
+  padding: 0.3rem;
+  background-color: black;
+  border-radius: 8.89px;
+  margin-right: 0.1rem;
+}
+
+.hereee span span svg:nth-of-type(2) {
+  /* fill: #dbb800; */
+}
+
+/* .legend {
+  display: none;
+} */
+
+.product-carousel ul li div p {
+  display: none;
+}
+
+.product-carousel p {
+  display: none;
+}
+
+.home-carousel {
+  height: 100%;
+}
+
+.home-carousel > div {
+  width: 100%;
+  border-radius: 37.19px;
+  height: 100%;
+}
+
+/* .h-full p {
+  display: none;
+} */
+
+.h-full .carousel-status {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .product-carousel {
+    width: 100%;
+    /* padding: 2rem; */
+  }
+
+  .product-carousel ul li div {
+    padding: 1rem;
+    margin: 1rem;
+    /* background: #ccc; */
+    background: rgba(250, 255, 255, 1);
+    box-shadow: -3px 3px 15px 0px rgba(0, 0, 0, 0.05);
+  }
+
+  .product-carousel ul li div img {
+    background: #faffff;
+  }
+
+  .product-carousel ul li div p {
+    display: none; /* Show hidden paragraphs for mobile */
+    /* font-size: 0.9rem; 
+    margin-top: 0.5rem;  */
+  }
+}
