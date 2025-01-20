@@ -101,7 +101,12 @@ const ProductCard = ({ product }) => {
         {/* <Text noOfLines={3} fontSize="0.6rem" color="gray.600">
           {product.description}
         </Text> */}
-        <Text lineClamp="3" fontSize="0.6rem" color="gray.600">
+        <Text
+          lineClamp={{ md: "3", base: "2" }}
+          fontSize="0.6rem"
+          color="gray.600"
+          lineHeight={{ base: "normal", md: "inherit" }}
+        >
           {product.description}
         </Text>
         <HStack alignItems="center">
