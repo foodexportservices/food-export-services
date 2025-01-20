@@ -278,7 +278,7 @@ const Product = () => {
                 </HStack>
               </HStack>
             </HStack>
-            <Tooltip content={product.description}>
+            {/* <Tooltip content={product.description}>
               <Text
                 noOfLines={5}
                 overflow="hidden"
@@ -290,8 +290,9 @@ const Product = () => {
               >
                 {product.description}
               </Text>
-            </Tooltip>
+            </Tooltip> */}
 
+            <Text>{product.description}</Text>
             <VStack my="1rem" w="100%" gap="0.5rem">
               {/* <Button
                 variant="outline"

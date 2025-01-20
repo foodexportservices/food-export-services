@@ -98,10 +98,12 @@ const ProductCard = ({ product }) => {
           {product.name}
         </Text>
 
-        <Text fontSize="0.6rem" color="gray.600" noOfLines={1}>
+        {/* <Text noOfLines={3} fontSize="0.6rem" color="gray.600">
+          {product.description}
+        </Text> */}
+        <Text lineClamp="3" fontSize="0.6rem" color="gray.600">
           {product.description}
         </Text>
-
         <HStack alignItems="center">
           <Rating
             readOnly

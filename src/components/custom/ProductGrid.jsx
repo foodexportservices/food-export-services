@@ -56,7 +56,7 @@ const ProductGrid = () => {
       id: 2,
       name: "Oils",
       tagline:
-        "Incredibly powerful CPU, GPU, and an SSD with integrated I/O will redefine your PlayStation experience.",
+        "Oils are versatile essentials, offering heart-healthy benefits, rich flavors for cooking, and nourishing properties for skin and hair care.",
       bgColor: "gray.100",
       color: "black",
       gridArea: "2 / 1 / 3 / 2",
@@ -77,7 +77,7 @@ const ProductGrid = () => {
       id: 3,
       name: "Seeds",
       tagline:
-        "The new 15-inch MacBook Air makes room for more of what you love with a spacious Liquid Retina display.",
+        "Seeds are nutrient-rich, providing healthy fats and flavor for snacks, cooking, and baking.",
       bgColor: "gray.100",
       color: "black",
       gridArea: "2 / 2 / 3 / 3",
@@ -85,7 +85,7 @@ const ProductGrid = () => {
       image: (
         <Image
           top="-5%"
-          right={{ md: "0%", base: "-52%" }}
+          right={{ md: "-8%", base: "-52%" }}
           position="absolute"
           src="/images/seedeys.png"
           alt="grains"
@@ -97,7 +97,8 @@ const ProductGrid = () => {
     {
       id: 4,
       name: "Lentils",
-      tagline: "Computational audio. Listen, it's powerful.",
+      tagline:
+        "Lentils are protein-packed and versatile, ideal for soups, salads, and wholesome meals.",
       bgColor: "gray.100",
       color: "black",
       gridArea: "3 / 1 / 4 / 2",
@@ -120,12 +121,12 @@ const ProductGrid = () => {
         <Text
           position="absolute"
           transform={{
-            md: "translate(200px, 56px)",
+            md: "translate(180px, 36px)",
             base: "translate(9px, 28px)",
           }}
           fontSize="1.7rem"
           color="gray.800"
-          w={{ base: "5rem" }}
+          w={{ base: "5rem", md: "fit-content" }}
           textAlign={{ base: "center" }}
         >
           Shop Lots More
@@ -150,7 +151,7 @@ const ProductGrid = () => {
           alt="grains"
           w={{ md: "40rem" }}
           h={{ base: "100%" }}
-          transform={{ base: "rotate(90deg) scale(1.2)" }}
+          transform={{ base: "rotate(90deg) scale(1.2)", md: "scale(1.2)" }}
         />
       ),
     },

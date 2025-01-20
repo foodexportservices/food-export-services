@@ -21,11 +21,11 @@ const ContactBanner = () => {
             color="#fff"
           >
             Email:{" "}
-            <Link to="mailto:foodexportservices@gmail.com">
-              <span>foodexportservices@gmail.com</span>
+            <Link to="mailto:foodexportservices@mail.com">
+              <span>foodexportservices@mail.com</span>
             </Link>
           </Text>
-          <Link to="mailto:foodexportservices@gmail.com">
+          <Link to="mailto:foodexportservices@mail.com">
             <VStack
               display={{ md: "none", base: "flex" }}
               alignItems="flex-start"
@@ -35,7 +35,7 @@ const ContactBanner = () => {
               gap="0"
             >
               <Text>Email:</Text>
-              <Text>foodexportservices@gmail.com</Text>
+              <Text>foodexportservices@mail.com</Text>
             </VStack>
           </Link>
 
