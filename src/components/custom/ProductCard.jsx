@@ -129,11 +129,17 @@ const ProductCard = ({ product }) => {
             </span>
           </Text> */}
           <HStack>
-            <Link to="mailto:foodexportservices@mail.com">
+            <Link
+              to="mailto:foodexportservices@mail.com"
+              onClick={(e) => e.stopPropagation()}
+            >
               <Image src="/images/email.png" alt="email" />
             </Link>
 
-            <Link to="https://wa.me/+16822963812">
+            <Link
+              to="https://wa.me/+16822963812"
+              onClick={(e) => e.stopPropagation()}
+            >
               <Image
                 src="/icons/whatsapp.svg"
                 alt="whatsapp"
@@ -141,7 +147,10 @@ const ProductCard = ({ product }) => {
               />
             </Link>
 
-            <Link to="https://www.instagram.com/foodexportservices">
+            <Link
+              to="https://www.instagram.com/foodexportservices"
+              onClick={(e) => e.stopPropagation()}
+            >
               <Image src="/icons/instagram.svg" alt="instagram" />
             </Link>
           </HStack>
