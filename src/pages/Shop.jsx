@@ -11,7 +11,7 @@ import {
 import React, { useEffect, useState } from "react";
 import Header from "../components/custom/Header";
 import SearchBar from "../components/custom/SearchBar";
-import FilterButtons from "../components/custom/FIlterButtons";
+import FilterButtons from "../components/custom/FilterButtons";
 import Catalog from "../components/custom/Catalog";
 import { Rating } from "@/components/ui/rating";
 import {
