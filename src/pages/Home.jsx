@@ -55,7 +55,7 @@ const carouselItems = [
         fontSize={{ base: "0.6rem", md: "1.7rem" }}
         transform={{
           md: "translateX(617px) translateY(233px)",
-          base: "translateX(133px) translateY(269px)",
+          base: "translateX(113px) translateY(269px)",
         }}
         p="8px"
         borderRadius="8px"
