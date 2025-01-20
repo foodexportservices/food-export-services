@@ -12,6 +12,39 @@ import ProductGrid from "../components/custom/ProductGrid";
 
 const carouselItems = [
   {
+    imageSrc: "/images/palmoil.jpg",
+    legend: (
+      <Text
+        position="absolute"
+        bottom="20px"
+        // left="20px"
+        color="black"
+        w={{ base: "17rem", md: "fit-content" }}
+        fontSize={{ md: "1.7rem", base: "1.1rem" }}
+        transform={{
+          md: "translateX(40px) translateY(-200px)",
+          base: "translateX(10px) translateY(-238px)",
+        }}
+        p="8px"
+        borderRadius="8px"
+        maxW="500px"
+        lineHeight="1.3"
+        fontWeight={{ base: "700" }}
+      >
+        Palm Oil: Rich Heritage, Richer Flavor • Sustainably Sourced • High Heat
+        Stability • Traditional Culinary Excellence
+      </Text>
+    ),
+    legendStyles: {
+      top: "10px",
+      right: "10px",
+      color: "black",
+      bg: "rgba(255, 255, 255, 0.7)",
+      p: "8px",
+      borderRadius: "8px",
+    },
+  },
+  {
     imageSrc: "/images/rapeseedoil.jpeg",
     legend: (
       <Text
@@ -71,39 +104,6 @@ const carouselItems = [
       color: "black",
       fontSize: "1.7rem",
       transform: "translateX(40px) translateY(-300px)",
-      p: "8px",
-      borderRadius: "8px",
-    },
-  },
-  {
-    imageSrc: "/images/palmoil.jpg",
-    legend: (
-      <Text
-        position="absolute"
-        bottom="20px"
-        // left="20px"
-        color="black"
-        w={{ base: "17rem", md: "fit-content" }}
-        fontSize={{ md: "1.7rem", base: "1.1rem" }}
-        transform={{
-          md: "translateX(40px) translateY(-200px)",
-          base: "translateX(10px) translateY(-238px)",
-        }}
-        p="8px"
-        borderRadius="8px"
-        maxW="500px"
-        lineHeight="1.3"
-        fontWeight={{ base: "700" }}
-      >
-        Palm Oil: Rich Heritage, Richer Flavor • Sustainably Sourced • High Heat
-        Stability • Traditional Culinary Excellence
-      </Text>
-    ),
-    legendStyles: {
-      top: "10px",
-      right: "10px",
-      color: "black",
-      bg: "rgba(255, 255, 255, 0.7)",
       p: "8px",
       borderRadius: "8px",
     },
