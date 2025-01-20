@@ -292,7 +292,7 @@ const Product = () => {
               </Text>
             </Tooltip> */}
 
-            <Text>{product.description}</Text>
+            <Text textAlign="justify">{product.description}</Text>
             <VStack my="1rem" w="100%" gap="0.5rem">
               {/* <Button
                 variant="outline"
@@ -534,7 +534,7 @@ const Product = () => {
               <Text fontSize="1.3rem" fontWeight="600">
                 Description
               </Text>
-              <ExpandableText description={product.description} />
+              <Text textAlign="justify">{product.description} </Text>
             </VStack>
 
             <HStack w="100%" justify="space-between" align="center" mb="1rem">
