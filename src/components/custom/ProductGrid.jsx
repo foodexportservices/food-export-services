@@ -122,9 +122,9 @@ const ProductGrid = () => {
           position="absolute"
           transform={{
             md: "translate(180px, 36px)",
-            base: "translate(9px, 28px)",
+            base: "translate(10px, 49px)",
           }}
-          fontSize="1.7rem"
+          fontSize={{ md: "1.7rem", base: "2rem" }}
           color="gray.800"
           w={{ base: "5rem", md: "fit-content" }}
           textAlign={{ base: "center" }}
@@ -151,7 +151,7 @@ const ProductGrid = () => {
           alt="grains"
           w={{ md: "40rem" }}
           h={{ base: "100%" }}
-          transform={{ base: "rotate(90deg) scale(1.2)", md: "scale(1.2)" }}
+          transform={{ base: "rotate(180deg)", md: "scale(1.2)" }}
         />
       ),
     },
