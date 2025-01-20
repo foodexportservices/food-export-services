@@ -32,7 +32,7 @@ const ContactBanner = () => {
             </VStack>
           </Link>
 
-          <VStack
+          {/* <VStack
             display={{ md: "none", base: "flex" }}
             alignItems="flex-start"
             fontSize="0.7rem"
@@ -42,7 +42,7 @@ const ContactBanner = () => {
           >
             <Text>Phone:</Text>
             <Text whiteSpace="nowrap">+1 (469) 435 - 8333</Text>
-          </VStack>
+          </VStack> */}
           <Text
             display={{ md: "flex", base: "none" }}
             fontSize="0.7rem"
@@ -52,7 +52,7 @@ const ContactBanner = () => {
             Phone: <span>+1 (469) 435 - 8333</span>
           </Text>
 
-          <Link to="https://wa.me/+14694358333">
+          {/* <Link to="https://wa.me/+14694358333">
             <VStack
               display={{ md: "none", base: "flex" }}
               alignItems="flex-start"
@@ -64,7 +64,7 @@ const ContactBanner = () => {
               <Text>Whatsapp:</Text>
               <Text whiteSpace="nowrap">+1 (469) 435 - 8333</Text>
             </VStack>
-          </Link>
+          </Link> */}
 
           <Link to="https://wa.me/+14694358333">
             <Text
@@ -76,6 +76,31 @@ const ContactBanner = () => {
               Whatsapp: <span>+1 (469) 435 - 8333</span>
             </Text>
           </Link>
+
+          <VStack
+            display={{ md: "none", base: "flex" }}
+            gap="0"
+            alignItems="flex-start"
+          >
+            <Text
+              fontSize="0.7rem"
+              fontWeight="600"
+              color="#fff"
+              whiteSpace="nowrap"
+            >
+              Phone: <span>+1 (469) 435 - 8333</span>
+            </Text>
+            <Link to="https://wa.me/+14694358333">
+              <Text
+                fontSize="0.7rem"
+                fontWeight="600"
+                color="#fff"
+                whiteSpace="nowrap"
+              >
+                Whatsapp: <span>+1 (469) 435 - 8333</span>
+              </Text>
+            </Link>
+          </VStack>
         </HStack>
       </Box>
     </>
