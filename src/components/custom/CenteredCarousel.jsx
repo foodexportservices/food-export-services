@@ -29,7 +29,7 @@ const CenteredCarousel = ({ items, onChange, onClickItem, onClickThumb }) => {
         showArrows={false}
         infiniteLoop={true}
         autoPlay={true}
-        interval={30000000}
+        interval={3000}
         onChange={onChange}
         onClickItem={onClickItem}
         onClickThumb={onClickThumb}
