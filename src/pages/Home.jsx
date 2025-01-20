@@ -12,6 +12,37 @@ import ProductGrid from "../components/custom/ProductGrid";
 
 const carouselItems = [
   {
+    imageSrc: "/images/rapeseedoil.jpeg",
+    legend: (
+      <Text
+        position="absolute"
+        color="black"
+        fontSize={{ base: "1rem", md: "1.7rem" }}
+        transform={{
+          md: "translateX(617px) translateY(233px)",
+          base: "translateX(133px) translateY(269px)",
+        }}
+        p="8px"
+        borderRadius="8px"
+        maxW="500px"
+        fontWeight={{ base: "700", md: "600" }}
+        w={{ base: "15rem", md: "100%" }}
+        lineHeight="1.3"
+      >
+        Golden Rapeseed: Nature's Pure Brilliance • Farm-Fresh Cold-Pressed •
+        Rich in Omega-3 • Perfect for Gourmet Cooking
+      </Text>
+    ),
+    legendStyles: {
+      bottom: "20px",
+      right: "20px",
+      color: "white",
+      bg: "rgba(0, 0, 0, 0.5)",
+      p: "8px",
+      borderRadius: "8px",
+    },
+  },
+  {
     imageSrc: "/images/sunflower1.jpg",
     legend: (
       <Text
@@ -52,7 +83,7 @@ const carouselItems = [
         bottom="20px"
         // left="20px"
         color="black"
-        w={{ base: "17rem", md: "0rem" }}
+        w={{ base: "17rem", md: "fit-content" }}
         fontSize={{ md: "1.7rem", base: "1.1rem" }}
         transform={{
           md: "translateX(40px) translateY(-200px)",
@@ -62,6 +93,7 @@ const carouselItems = [
         borderRadius="8px"
         maxW="500px"
         lineHeight="1.3"
+        fontWeight={{ base: "700" }}
       >
         Palm Oil: Rich Heritage, Richer Flavor • Sustainably Sourced • High Heat
         Stability • Traditional Culinary Excellence
@@ -72,39 +104,6 @@ const carouselItems = [
       right: "10px",
       color: "black",
       bg: "rgba(255, 255, 255, 0.7)",
-      p: "8px",
-      borderRadius: "8px",
-    },
-  },
-  {
-    imageSrc: "/images/rapeseedoil.jpeg",
-    legend: (
-      <Text
-        position="absolute"
-        bottom="20px"
-        left="20px"
-        color="black"
-        fontSize={{ base: "1rem", md: "1.7rem" }}
-        transform={{
-          md: "translateX(617px) translateY(233px)",
-          base: "translateX(133px) translateY(269px)",
-        }}
-        p="8px"
-        borderRadius="8px"
-        maxW="500px"
-        fontWeight={{ base: "700", md: "300" }}
-        w={{ base: "15rem", md: "100%" }}
-        lineHeight="1.3"
-      >
-        Golden Rapeseed: Nature's Pure Brilliance • Farm-Fresh Cold-Pressed •
-        Rich in Omega-3 • Perfect for Gourmet Cooking
-      </Text>
-    ),
-    legendStyles: {
-      bottom: "20px",
-      right: "20px",
-      color: "white",
-      bg: "rgba(0, 0, 0, 0.5)",
       p: "8px",
       borderRadius: "8px",
     },
