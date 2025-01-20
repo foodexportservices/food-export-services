@@ -7,7 +7,7 @@ const SearchBar = () => {
     <>
       <HStack
         display={{ md: "flex", base: "none" }}
-        mt={{ base: "5rem", md: "0" }}
+        mt={{ base: "5rem", md: "7rem" }}
         w={{ md: "100%", base: "100dvw" }}
         // px={{ base: "2rem", md: "0" }}
         justifyContent="center"
@@ -45,7 +45,7 @@ const SearchBar = () => {
 
       <HStack
         display={{ md: "none", base: "flex" }}
-        mt={{ base: "5rem" }}
+        mt={{ base: "8rem" }}
         w={{ base: "100vw" }}
         px={{ base: "2rem" }}
         gap="0"

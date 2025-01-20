@@ -10,6 +10,7 @@ import "../assets/styles/Product.css";
 import CenteredCarousel from "../components/custom/CenteredCarousel";
 import ProductGrid from "../components/custom/ProductGrid";
 import { Link } from "react-router-dom";
+import ContactBanner from "../components/custom/ContactBanner";
 
 const carouselItems = [
   {
@@ -129,7 +130,11 @@ const Home = () => {
     <>
       <Box pb="3rem">
         <VStack>
-          <Header />
+          <Box w={{ md: "100dvw" }} zIndex={2} position="fixed">
+            <ContactBanner />
+
+            <Header />
+          </Box>
           {/* <Text>
             {" "}
             {isAuthenticated ? "User is logged in" : "User is not logged in"}

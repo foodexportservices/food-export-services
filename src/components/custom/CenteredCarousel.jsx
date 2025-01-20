@@ -15,7 +15,7 @@ const styles = `
 const CenteredCarousel = ({ items, onChange, onClickItem, onClickThumb }) => {
   return (
     <Box
-      mt={{ base: "5rem", md: "0rem" }}
+      mt={{ base: "8rem", md: "7rem" }}
       position="relative"
       w="100%"
       h="400px"

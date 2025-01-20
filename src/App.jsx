@@ -73,7 +73,6 @@ const Main = () => {
       {isLoading && <LoadingOverlay />}
       {!routeLoading && (
         <>
-          <ContactBanner />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop />} />

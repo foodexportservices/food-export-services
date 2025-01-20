@@ -5,7 +5,14 @@ import { Link } from "react-router-dom";
 const ContactBanner = () => {
   return (
     <>
-      <Box zIndex={2} position="fixed" w="100%" bg="red" px="2rem" py="0.2rem">
+      <Box
+        //   position="fixed"
+        id="lll"
+        w="100%"
+        bg="red"
+        px="2rem"
+        py="0.2rem"
+      >
         <HStack w="100%" justifyContent="space-between">
           <Text
             display={{ md: "flex", base: "none" }}

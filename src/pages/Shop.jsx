@@ -24,6 +24,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useCart } from "../contexts/CartContext";
 import { Link } from "react-router-dom";
 import ProductCard from "../components/custom/ProductCard";
+import ContactBanner from "../components/custom/ContactBanner";
 
 const Shop = () => {
   const [filters, setFilters] = useState(["all"]);
@@ -69,7 +70,11 @@ const Shop = () => {
     <>
       <Box>
         <VStack>
-          <Header />
+          <Box w={{ md: "100dvw" }} zIndex={2} position="fixed">
+            <ContactBanner />
+
+            <Header />
+          </Box>
 
           <SearchBar />
 

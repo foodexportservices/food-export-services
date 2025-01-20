@@ -34,6 +34,7 @@ import { Minus, Plus } from "lucide-react";
 import { useCart } from "../contexts/CartContext";
 import ReviewForm from "../components/custom/ReviewForm";
 import ExpandableText from "../components/custom/ExpandedText";
+import ContactBanner from "../components/custom/ContactBanner";
 
 const Product = () => {
   const { id } = useParams();
@@ -112,8 +113,13 @@ const Product = () => {
   return (
     <Box>
       <VStack>
-        <Header />
+        <Box w={{ md: "100dvw" }} zIndex={2} position="fixed">
+          <ContactBanner />
+
+          <Header />
+        </Box>
         <HStack
+          mt="7rem"
           display={{ md: "flex", base: "none" }}
           p="1.25rem 4rem"
           w="100%"
@@ -334,7 +340,7 @@ const Product = () => {
 
         <VStack
           display={{ md: "none", base: "flex" }}
-          mt={{ base: "5rem" }}
+          mt={{ base: "8rem" }}
           pb="3rem"
           w="100dvw"
           alignItems="flex-start"

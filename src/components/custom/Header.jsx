@@ -217,8 +217,6 @@ const Header = () => {
     <>
       <HStack
         bg="#faffff"
-        zIndex={2}
-        position="fixed"
         display={{ base: "flex", md: "none" }}
         mb="1rem"
         w={{ md: "100%", base: "100dvw" }}
@@ -366,6 +364,7 @@ const Header = () => {
       </HStack>
 
       <HStack
+        bg="#faffff"
         display={{ base: "none", md: "flex" }}
         mb="1rem"
         w="100%"
