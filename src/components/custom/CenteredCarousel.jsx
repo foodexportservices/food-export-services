@@ -15,7 +15,7 @@ const styles = `
 const CenteredCarousel = ({ items, onChange, onClickItem, onClickThumb }) => {
   return (
     <Box
-      mt={{ base: "5rem" }}
+      mt={{ base: "5rem", md: "0rem" }}
       position="relative"
       w="100%"
       h="400px"
@@ -29,7 +29,7 @@ const CenteredCarousel = ({ items, onChange, onClickItem, onClickThumb }) => {
         showArrows={false}
         infiniteLoop={true}
         autoPlay={true}
-        interval={3000}
+        interval={30000000}
         onChange={onChange}
         onClickItem={onClickItem}
         onClickThumb={onClickThumb}

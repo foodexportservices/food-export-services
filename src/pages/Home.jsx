@@ -16,12 +16,15 @@ const carouselItems = [
     legend: (
       <Text
         position="absolute"
-        bottom={{ md: "20px" }}
-        top={{ base: "15px" }}
+        bottom={{ md: "20px", base: "0px" }}
+        top={{ base: "15px", md: "0px" }}
         left={{ md: "20px", base: "0px" }}
         color="black"
         fontSize={{ md: "1.7rem", base: "1.1rem" }}
-        transform={{ md: "translateX(1px) translateY(-205px)" }}
+        transform={{
+          md: "translateX(1px) translateY(3px)",
+          base: "scale(1.0)",
+        }}
         p="8px"
         borderRadius="8px"
         maxW="500px"
@@ -49,7 +52,7 @@ const carouselItems = [
         bottom="20px"
         // left="20px"
         color="black"
-        w={{ base: "17rem" }}
+        w={{ base: "17rem", md: "0rem" }}
         fontSize={{ md: "1.7rem", base: "1.1rem" }}
         transform={{
           md: "translateX(40px) translateY(-200px)",
@@ -78,8 +81,8 @@ const carouselItems = [
     legend: (
       <Text
         position="absolute"
-        // bottom="20px"
-        // left="20px"
+        bottom="20px"
+        left="20px"
         color="black"
         fontSize={{ base: "1rem", md: "1.7rem" }}
         transform={{
@@ -89,8 +92,8 @@ const carouselItems = [
         p="8px"
         borderRadius="8px"
         maxW="500px"
-        fontWeight={{ base: "700" }}
-        w={{ base: "15rem" }}
+        fontWeight={{ base: "700", md: "300" }}
+        w={{ base: "15rem", md: "100%" }}
         lineHeight="1.3"
       >
         Golden Rapeseed: Nature's Pure Brilliance • Farm-Fresh Cold-Pressed •
