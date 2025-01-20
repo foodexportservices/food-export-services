@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { Carousel } from "react-responsive-carousel";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import {
   NativeSelectField,
   NativeSelectRoot,
@@ -35,6 +35,7 @@ import { useCart } from "../contexts/CartContext";
 import ReviewForm from "../components/custom/ReviewForm";
 import ExpandableText from "../components/custom/ExpandedText";
 import ContactBanner from "../components/custom/ContactBanner";
+import { toaster } from "../components/ui/toaster";
 
 const Product = () => {
   const { id } = useParams();
@@ -42,7 +43,13 @@ const Product = () => {
   const product = useSelector(selectSelectedProduct);
   const reviews = useSelector(selectProductReviews(id)) || [];
   const error = useSelector(selectProductError(id));
-  const { addToCart, removeFromCart, cart } = useCart();
+  const {
+    addToCart,
+    removeFromCart,
+    cart,
+    isInCart: contextIsInCart,
+  } = useCart();
+  const [isHovering, setIsHovering] = useState(false);
   const [quantity, setQuantity] = useState(1);
   const [isInCart, setIsInCart] = useState(false);
 
@@ -108,6 +115,47 @@ const Product = () => {
 
   const onClickThumb = (index) => {
     console.log("Thumbnail clicked at index:", index);
+  };
+
+  const getButtonText = () => {
+    if (!contextIsInCart(product)) return "Add to Cart";
+    return isHovering ? "Remove" : "Added to cart";
+  };
+
+  const getButtonColor = () => {
+    const inCart = contextIsInCart(product);
+    if (!inCart) {
+      return {
+        bg: "#003737",
+        hoverBg: "#059a9a",
+      };
+    }
+    return {
+      bg: "#059a9a",
+      hoverBg: isHovering ? "#DC2626" : "#059a9a",
+    };
+  };
+
+  const buttonColors = getButtonColor();
+
+  const handleCartAction = (e) => {
+    e.stopPropagation();
+
+    if (contextIsInCart(product)) {
+      removeFromCart(product._id);
+      toaster.create({
+        title: "Removed from cart",
+        description: `${product.name} has been removed from your cart`,
+        type: "warning",
+      });
+    } else {
+      addToCart(product);
+      toaster.create({
+        title: "Added to cart",
+        description: `${product.name} has been added to your cart`,
+        type: "success",
+      });
+    }
   };
 
   return (
@@ -487,6 +535,68 @@ const Product = () => {
               </Text>
               <ExpandableText description={product.description} />
             </VStack>
+
+            <HStack w="100%" justify="space-between" align="center" mb="1rem">
+              {/* <Text fontSize="md" fontWeight="bold" color="#003737">
+            ${product.price.toFixed(2)}
+            <span
+              style={{
+                fontSize: "0.7rem",
+                fontWeight: "normal",
+                position: "absolute",
+                marginLeft: "0.5rem",
+                textDecoration: "line-through",
+                color: "red",
+              }}
+            >
+              ${product.oldPrice.toFixed(2)}
+            </span>
+          </Text> */}
+              <HStack gap="1rem">
+                <Link
+                  to="mailto:foodexportservices@mail.com"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <Image src="/images/email.png" alt="email" w="40px" />
+                </Link>
+
+                <Link
+                  to="https://wa.me/+16822963812"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <Image
+                    src="/icons/whatsapp.svg"
+                    alt="whatsapp"
+                    transform="scale(1.2)"
+                    w="40px"
+                  />
+                </Link>
+
+                <Link
+                  to="https://www.instagram.com/foodexportservices"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <Image src="/icons/instagram.svg" alt="instagram" w="40px" />
+                </Link>
+              </HStack>
+
+              <Button
+                onClick={handleCartAction}
+                onMouseEnter={() => setIsHovering(true)}
+                onMouseLeave={() => setIsHovering(false)}
+                bg={buttonColors.bg}
+                color="white"
+                _hover={{
+                  bg: buttonColors.hoverBg,
+                  transform: "scale(1.02)",
+                }}
+                // size={{ md: "xs" }}
+                // p={{ base: "0.3rem" }}
+                // fontSize={{ base: "0.5rem" }}
+              >
+                {getButtonText()}
+              </Button>
+            </HStack>
 
             <VStack w="100%" alignItems="flex-start">
               <Text fontSize="1.3rem" fontWeight="600">
