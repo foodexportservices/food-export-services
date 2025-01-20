@@ -23,6 +23,7 @@ import {
   selectIsAnyProductLoading,
 } from "./redux/productSlice";
 import Product from "./pages/Product";
+import ContactBanner from "./components/custom/ContactBanner";
 
 // Wrapper component to handle product-specific loading state
 const ProductRoute = () => {
@@ -71,19 +72,22 @@ const Main = () => {
     <>
       {isLoading && <LoadingOverlay />}
       {!routeLoading && (
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/products/:id" element={<ProductRoute />} />
-          <Route
-            path="/login"
-            element={
-              <PublicRoute>
-                <Login />
-              </PublicRoute>
-            }
-          />
-        </Routes>
+        <>
+          <ContactBanner />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/products/:id" element={<ProductRoute />} />
+            <Route
+              path="/login"
+              element={
+                <PublicRoute>
+                  <Login />
+                </PublicRoute>
+              }
+            />
+          </Routes>
+        </>
       )}
     </>
   );

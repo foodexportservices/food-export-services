@@ -1,4 +1,4 @@
-import { Box, Grid, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, Grid, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Header from "../components/custom/Header";
 import SearchBar from "../components/custom/SearchBar";
@@ -9,6 +9,7 @@ import { Carousel } from "react-responsive-carousel";
 import "../assets/styles/Product.css";
 import CenteredCarousel from "../components/custom/CenteredCarousel";
 import ProductGrid from "../components/custom/ProductGrid";
+import { Link } from "react-router-dom";
 
 const carouselItems = [
   {
@@ -29,7 +30,7 @@ const carouselItems = [
         borderRadius="8px"
         maxW="500px"
         lineHeight="1.3"
-        fontWeight={{ base: "700" }}
+        fontWeight={{ md: "600", base: "700" }}
       >
         Palm Oil: Rich Heritage, Richer Flavor • Sustainably Sourced • High Heat
         Stability • Traditional Culinary Excellence
@@ -93,6 +94,7 @@ const carouselItems = [
         borderRadius="8px"
         maxW="500px"
         lineHeight="1.3"
+        fontWeight="600"
       >
         Sunflower Gold: Sunshine in Every Drop • Vitamin E Rich • Light &
         Versatile • From Field to Table Excellence
