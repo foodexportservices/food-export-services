@@ -52,7 +52,7 @@ const carouselItems = [
       <Text
         position="absolute"
         color="black"
-        fontSize={{ base: "1rem", md: "1.7rem" }}
+        fontSize={{ base: "0.6rem", md: "1.7rem" }}
         transform={{
           md: "translateX(617px) translateY(233px)",
           base: "translateX(133px) translateY(269px)",
