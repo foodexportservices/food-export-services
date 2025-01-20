@@ -2,7 +2,7 @@ import { Box, Grid, Image, Text, VStack } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Header from "../components/custom/Header";
 import SearchBar from "../components/custom/SearchBar";
-import FilterButtons from "../components/custom/FIlterButtons";
+import FilterButtons from "../components/custom/FilterButtons";
 import { selectIsAuthenticated } from "../redux/userSlice";
 import { useSelector } from "react-redux";
 import { Carousel } from "react-responsive-carousel";
